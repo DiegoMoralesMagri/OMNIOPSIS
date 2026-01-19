@@ -1,0 +1,315 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathtools}
+
+\geometry{margin=2.5cm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title{\textbf{OMNIOPSIS --- A Mathematical Framework for the Enumeration\\of All Finite Visual Representations}}
+\author{Diego Morales Magri \\ \textit{Independent Researcher}}
+\date{\today}
+
+\newcommand{\omniopsisdef}{\textit{Omniopsis} refers to the total space of all finite visual representations, understood as the set of all images encodable in a discrete pixel-based format.}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This article introduces a formal function that establishes an explicit correspondence between the set of natural numbers and the set of all finite visual representations encodable as digital images. By decomposing each natural number into a triplet $(w, h, k)$ through a bijection between $\mathbb{N}$ and $\mathbb{N}^3$, and by interpreting $k$ as a base-256 expansion of pixel values, the proposed framework enumerates exhaustively the space of all finite RGB images. Since any symbolic system that can be visually encoded---text, mathematical notation, musical scores, diagrams, maps, and other representational structures---is a subset of this image space, the function implicitly enumerates all finite visual representations. This provides a rigorous mathematical foundation for a ``total representation space'', with implications for information theory, digital aesthetics, and the philosophy of representation. We refer to this total space of finite visual representations as the \textit{Omniopsis}.
+\end{abstract}
+
+\section{Introduction}
+
+Visual representations---images, written text, diagrams, mathematical expressions, musical scores, maps, and other symbolic structures---are typically understood as discrete arrangements of visual elements. In the digital domain, such representations can be encoded as arrays of pixel values, each pixel being represented by a finite number of bits. For a fixed resolution $w \times h$, the set of all possible RGB images is finite but extremely large, namely $\{0, \ldots, 255\}^{3wh}$.
+
+The union of these sets over all possible resolutions is infinite, though countable. This implies the existence of a bijection between the natural numbers and the set of all finite digital images. Since any finite visual representation can be rendered as an image, this bijection extends naturally to the entire space of finite visual representations.
+
+The purpose of this article is to formalize such a bijection and to propose a concise function that enumerates every possible finite visual representation, regardless of its dimensions or content. Our goal is to provide a minimal, explicit, and mathematically rigorous formulation of the total space of finite visual representations. This framework provides a minimal and rigorous foundation for what we call the \textit{Omniopsis}, the total space of finite visual representations, with potential applications in theoretical computer science, combinatorics, digital aesthetics, and the philosophy of representation.
+
+\section{Preliminaries}
+
+\subsection{Digital images as finite vectors}
+
+An RGB image of resolution $w \times h$ can be represented as a vector in
+\[
+\{0, \ldots, 255\}^{3wh}.
+\]
+Each component corresponds to one color channel (R, G, or B) of a pixel.
+
+\subsection{Countability of the space of all images}
+
+Define the set of all finite RGB images as
+\[
+\mathcal{I} = \bigcup_{w,h \geq 1} \{0, \ldots, 255\}^{3wh}.
+\]
+Since each $\{0, \ldots, 255\}^{3wh}$ is finite and the union is taken over $\mathbb{N}^2$, the set $\mathcal{I}$ is countable. Therefore, there exists a bijection
+\[
+\mathbb{N} \simeq \mathcal{I}.
+\]
+Since any finite visual representation can be encoded as an image, the set $\mathcal{I}$ also contains all finite visual representations. The union of all such encodings constitutes the \textit{Omniopsis}.
+
+\section{Decomposition of Natural Numbers}
+
+To construct an explicit enumeration, we rely on the existence of a bijection
+\[
+\varphi : \mathbb{N} \to \mathbb{N}^3, \quad \varphi(n) = (w(n), h(n), k(n)).
+\]
+Any standard bijection between $\mathbb{N}$ and $\mathbb{N}^3$ (e.g., Cantor pairing extended to three variables, prime factorization encoding, or mixed-radix encoding) is sufficient; the specific choice does not affect the definition of $F$. The essential requirement is that $\varphi$ is bijective and that each natural number $n$ uniquely determines a triplet $(w, h, k)$.
+
+\section{Enumeration Function}
+
+\subsection{Definition}
+
+We define the enumeration function
+\[
+F : \mathbb{N} \to \mathcal{I}
+\]
+by
+\begin{equation}
+\boxed{F(n) = \left( \left\lfloor \frac{k(n)}{256^i} \right\rfloor \bmod 256 \right)_{i=0}^{3w(n)h(n)-1}}
+\end{equation}
+
+Or, more compactly:
+\begin{equation}
+\boxed{F(n) = (k(n))_{256}}
+\end{equation}
+where $(k)_{256}$ denotes the base-256 representation of $k$.
+
+\subsection{Interpretation}
+
+\begin{itemize}
+    \item $w(n)$ and $h(n)$ specify the resolution of the image.
+    \item $k(n)$ is interpreted as an integer whose base-256 expansion yields the pixel values.
+    \item The sequence $\left( \left\lfloor k/256^i \right\rfloor \bmod 256 \right)$ corresponds to the ordered list of RGB components.
+\end{itemize}
+
+Thus, for each $n \in \mathbb{N}$, the function $F(n)$ returns a unique image of resolution $w(n) \times h(n)$.
+
+\subsection{Alternative formulation for fixed resolution}
+
+For a fixed resolution $w \times h$, we can define a simpler enumeration function:
+\begin{equation}
+\boxed{I_{w,h}(k) = (k)_{256} \in \{0, \ldots, 255\}^{3wh}}
+\end{equation}
+where $k \in [0, 256^{3wh} - 1]$.
+
+This function generates all possible images of resolution $w \times h$ as $k$ ranges from $0$ to $256^{3wh} - 1$. The function $F$ thus provides an explicit enumeration of the \textit{Omniopsis}.
+
+\section{Properties}
+
+\begin{theorem}[Bijectivity]
+The function $F : \mathbb{N} \to \mathcal{I}$ is a bijection.
+\end{theorem}
+
+\begin{proof}
+We prove both surjectivity and injectivity.
+
+\textbf{Surjectivity:}
+For any image $I \in \mathcal{I}$, there exists a triplet $(w, h, k)$ such that $I$ is the base-256 expansion of $k$ with $3wh$ digits. Since $\varphi$ is surjective, there exists $n$ such that $\varphi(n) = (w, h, k)$. Thus $F(n) = I$.
+
+\textbf{Injectivity:}
+If $F(n) = F(m)$, then the corresponding triplets $(w(n), h(n), k(n))$ and $(w(m), h(m), k(m))$ must be identical (same dimensions and same pixel values). Since $\varphi$ is injective, this implies $n = m$.
+\end{proof}
+
+\begin{proposition}[Exhaustiveness]
+The function $F$ enumerates every possible finite RGB image exactly once.
+\end{proposition}
+
+\begin{proposition}[Incremental generation]
+For a fixed resolution $w \times h$, consecutive values of $k$ generate images that differ by a single color component:
+\[
+I_{w,h}(k+1) = I_{w,h}(k) + (1, 0, 0, \ldots, 0)_{\text{base } 256}
+\]
+where the addition is performed with carry in base 256.
+\end{proposition}
+
+\subsection{Cardinality}
+
+The total number of images of resolution $w \times h$ is:
+\[
+|I_{w,h}| = 256^{3wh}
+\]
+
+For example:
+\begin{itemize}
+    \item $1 \times 1$ image: $256^3 = 16{,}777{,}216$ images
+    \item $2 \times 2$ image: $256^{12} \approx 7.9 \times 10^{28}$ images
+    \item $592 \times 400$ image: $256^{710{,}400} \approx 10^{1{,}710{,}814}$ images
+\end{itemize}
+
+\section{Related Work}
+
+The concept of enumerating all possible objects of a given type has deep roots in mathematics, philosophy, and art. Because the framework applies to all visual encodings, it intersects with research on symbolic systems, notation, and visual languages.
+
+\textbf{Combinatorics and information theory:}
+Shannon's information theory \cite{shannon1948} provides the foundation for understanding the informational content of images. Kolmogorov complexity \cite{kolmogorov1965} offers a theoretical framework for measuring the intrinsic complexity of discrete objects, including images.
+
+\textbf{Philosophy and conceptual art:}
+Borges' short story ``The Library of Babel'' \cite{borges1941} imagines a library containing all possible books. Our work provides a mathematical realization of a similar concept for images: a ``Visual Library of Babel''. In conceptual art, Sol LeWitt's instruction-based artworks \cite{lewitt1967} demonstrate that art can be defined by algorithmic rules rather than physical execution.
+
+\textbf{Computational enumeration:}
+Wolfram's work on computational irreducibility \cite{wolfram2002} explores the space of all possible programs and their outputs. Our enumeration function can be viewed as defining a deterministic mapping from natural numbers to visual outputs.
+
+\textbf{Digital aesthetics:}
+Recent work in procedural generation and generative art explores subsets of the total image space through various algorithmic constraints \cite{galanter2003}.
+
+Our contribution differs from these works by providing an \emph{explicit, minimal, and mathematically rigorous} enumeration function that encompasses \emph{all} possible digital images.
+
+\section{Implementation}
+
+\subsection{Image to order}
+
+Given an image $I$ of resolution $w \times h$ with pixel components $(c_0, c_1, \ldots, c_{3wh-1})$, the order is computed as:
+\[
+k = \sum_{i=0}^{3wh-1} c_i \cdot 256^i
+\]
+
+This computation has polynomial time complexity $O(wh)$.
+
+\subsection{Order to image}
+
+Given an order $k$ and dimensions $w \times h$, the image components are recovered by:
+\[
+c_i = \left\lfloor \frac{k}{256^i} \right\rfloor \bmod 256 \quad \text{for } i = 0, 1, \ldots, 3wh-1
+\]
+
+This also has polynomial time complexity $O(wh)$.
+
+\section{Discussion}
+
+The function $F$ provides a compact mathematical representation of the entire space of digital images. This has several implications:
+
+\subsection{Theoretical computer science}
+
+The function offers a canonical enumeration of visual data, relevant to Kolmogorov complexity and algorithmic information theory. Every image can be uniquely identified by a single natural number, providing a foundation for measuring image complexity and compressibility.
+
+\subsection{Philosophy of representation}
+
+Every conceivable image---real, fictional, abstract, or impossible---corresponds to a natural number. The space of images becomes a structured, traversable mathematical object. This includes not only images but also all symbolic structures that can be visually encoded. The \textit{Omniopsis} can therefore be understood as a mathematically defined space of all possible visual and symbolic appearances. This raises philosophical questions about:
+\begin{itemize}
+    \item The nature of visual information
+    \item The relationship between numbers and perception
+    \item The exhaustibility of visual representation
+\end{itemize}
+
+\subsection{Digital aesthetics and conceptual art}
+
+The formula itself can be interpreted as an artwork: a symbolic generator of all possible images, a visual analogue to Borges' ``Library of Babel''. Unlike the infinite library of texts, the space of images of a given resolution is finite but astronomically large.
+
+Some notable points in this space:
+\begin{itemize}
+    \item $I(0)$: The completely black image
+    \item $I(1)$: Black image with first pixel's red component = 1
+    \item $I(256^3 - 1)$: Black image with first pixel white
+    \item $I(256^{3wh} - 1)$: The completely white image
+\end{itemize}
+
+Between these extremes lie all photographs ever taken, all paintings ever created, all frames of every film, and all images yet to be conceived.
+
+\subsection{Practical considerations}
+
+While the function is theoretically elegant, practical enumeration faces computational limits:
+\begin{itemize}
+    \item For even modest resolutions (e.g., $100 \times 100$), the number space is too large to traverse in any meaningful time
+    \item The integers involved grow exponentially with image size
+    \item Storage of a single order number for a high-resolution image requires approximately $3wh \log_{10}(256) / \log_{10}(2)$ bits
+\end{itemize}
+
+\section{Extensions and Future Work}
+
+\subsection{Generalization to other color spaces}
+
+The framework extends naturally to:
+\begin{itemize}
+    \item Grayscale images: base 256 with $wh$ components
+    \item RGBA images: base 256 with $4wh$ components
+    \item Higher bit-depth images: base $2^b$ for $b$-bit channels
+\end{itemize}
+
+\subsection{Video sequences}
+
+A video of $f$ frames can be treated as an image of resolution $w \times h \times f$, yielding:
+\[
+I_{\text{video}}(k) = (k)_{256} \in \{0, 255\}^{3whf}
+\]
+
+\subsection{Compression and sparse representation}
+
+Most images occupy a tiny, non-random subset of the total space. Understanding the structure of this subset could inform:
+\begin{itemize}
+    \item Novel compression algorithms
+    \item Generative models
+    \item Image quality metrics
+\end{itemize}
+
+\subsection{Symbolic representations}
+
+Any symbolic system that can be visually encoded---written language, mathematical notation, musical scores, diagrams, maps, architectural plans---forms a subset of the total image space.
+Therefore, the enumeration function $F$ does not only enumerate all possible images, but also all possible finite symbolic representations.
+
+This observation has profound implications:
+
+\begin{itemize}
+    \item \textbf{Universal representation:} Every written text ever composed, every mathematical proof ever formulated, every musical score ever written, and every diagram ever drawn corresponds to some natural number.
+    \item \textbf{Cross-modal enumeration:} The function provides a unified framework for enumerating objects across different representational modalities.
+    \item \textbf{Knowledge space:} Since knowledge is typically encoded symbolically, the total image space contains, as a subset, the space of all representable knowledge.
+\end{itemize}
+
+This extends the scope of the framework beyond purely visual data to encompass the totality of finite symbolic expression. In this sense, $F$ can be viewed as a universal enumeration function for discrete representational systems. This universal representational domain is what we designate as the \textit{Omniopsis}.
+
+\section{Conclusion}
+
+We have presented a concise and rigorous function that enumerates the \textit{Omniopsis}, the total set of all finite visual representations. This construction demonstrates that the universe of finite visual representations is not only countable but explicitly traversable through a single natural parameter.
+
+The function $F$ thus provides a foundational tool for exploring the combinatorial, philosophical, and artistic dimensions of the total representation space. The remarkable simplicity of the formula---essentially viewing images as numbers in base 256---reveals a deep structural relationship between discrete mathematics and visual representation.
+
+The \textit{Omniopsis} provides a unified mathematical foundation for understanding the totality of finite visual and symbolic forms. In the words of Leopold Kronecker: ``God made the integers, all else is the work of man.'' This work suggests that perhaps all images, too, are merely integers awaiting interpretation.
+
+\vspace{1cm}
+
+\noindent\textit{Keywords:} Omniopsis, visual representations, enumeration, bijection, base-256 representation, total image space, Kolmogorov complexity, digital aesthetics
+
+\begin{thebibliography}{99}
+
+\bibitem{shannon1948}
+C. E. Shannon.
+\textit{A Mathematical Theory of Communication}.
+Bell System Technical Journal, 27(3):379--423, 1948.
+
+\bibitem{kolmogorov1965}
+A. N. Kolmogorov.
+\textit{Three Approaches to the Quantitative Definition of Information}.
+Problems of Information Transmission, 1(1):1--7, 1965.
+
+\bibitem{borges1941}
+J. L. Borges.
+\textit{The Library of Babel}.
+In \textit{Ficciones}, 1941.
+
+\bibitem{lewitt1967}
+S. LeWitt.
+\textit{Paragraphs on Conceptual Art}.
+Artforum, 5(10):79--83, 1967.
+
+\bibitem{wolfram2002}
+S. Wolfram.
+\textit{A New Kind of Science}.
+Wolfram Media, 2002.
+
+\bibitem{galanter2003}
+P. Galanter.
+\textit{What is Generative Art? Complexity Theory as a Context for Art Theory}.
+In Proceedings of the International Conference on Generative Art, 2003.
+
+\end{thebibliography}
+
+\end{document}

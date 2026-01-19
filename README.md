@@ -1,6 +1,8 @@
 # **OMNIOPSIS**  
 ### *The total space of all finite visual representations*
 
+[![DOI](https://zenodo.org/badge/1137209955.svg)](https://doi.org/10.5281/zenodo.18295945)
+
 > **OMNIOPSIS** is the name we give to the complete set of all finite visual and symbolic forms that can be encoded as digital images.  
 > It is a mathematical space, a conceptual framework, and an artistic horizon.
 

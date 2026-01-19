@@ -1,6 +1,6 @@
 # **OMNIOPSIS**  
 ### *L’espace total de toutes les représentations visuelles finies*
-
+[![DOI](https://zenodo.org/badge/1137209955.svg)](https://doi.org/10.5281/zenodo.18295945)
 > **OMNIOPSIS** désigne l’ensemble complet de toutes les formes visuelles et symboliques finies pouvant être encodées sous forme d’images numériques.  
 > C’est un espace mathématique, un cadre conceptuel et un horizon artistique.
 

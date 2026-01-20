@@ -270,10 +270,11 @@ AI can be a navigator of the Omniopsis.
 
 For questions not answered here:
 
-**Email**: [contact email]  
-**Website**: [website]  
-**Repository**: [GitHub link]
+**Email**: coming soon 
+**Website**: omniopsis.com (website actually under construction) 
+**Repository**: GitHub.com/DiegoMoralesMagri/OMNIOPSIS
 
 ---
 
 *Last updated: January 2026*
+*OMNIOPSIS © 2026 — Diego Morales Magri*

@@ -1,0 +1,406 @@
+{
+  "timestamp": "2026-01-24T13:18:09.991474",
+  "total_tested": 210,
+  "top_candidates": [
+    {
+      "name": "sin_i2_tau",
+      "generator": "sin_i2",
+      "constant": "tau",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7578784625383954,
+        "compression_ratio": 0.359375,
+        "spectral_flatness": 0.010849127612192437,
+        "pixel_std": 0.41339864235384227,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.94097321323717,
+        "entropy_component": 90.52651921827007,
+        "compression_component": 100,
+        "spectral_component": 98.91508723878076
+      }
+    },
+    {
+      "name": "sin_i2_2pi",
+      "generator": "sin_i2",
+      "constant": "2pi",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7578784625383954,
+        "compression_ratio": 0.359375,
+        "spectral_flatness": 0.010849127612192437,
+        "pixel_std": 0.41339864235384227,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.94097321323717,
+        "entropy_component": 90.52651921827007,
+        "compression_component": 100,
+        "spectral_component": 98.91508723878076
+      }
+    },
+    {
+      "name": "sin_i3_tau",
+      "generator": "sin_i3",
+      "constant": "tau",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7855602922535472,
+        "compression_ratio": 0.3489583333333333,
+        "spectral_flatness": 0.01173943940062379,
+        "pixel_std": 0.4236075534914362,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.81936011603672,
+        "entropy_component": 90.18049634683067,
+        "compression_component": 100,
+        "spectral_component": 98.82605605993761
+      }
+    },
+    {
+      "name": "sin_i3_2pi",
+      "generator": "sin_i3",
+      "constant": "2pi",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7855602922535472,
+        "compression_ratio": 0.3489583333333333,
+        "spectral_flatness": 0.01173943940062379,
+        "pixel_std": 0.4236075534914362,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.81936011603672,
+        "entropy_component": 90.18049634683067,
+        "compression_component": 100,
+        "spectral_component": 98.82605605993761
+      }
+    },
+    {
+      "name": "sin_i_tau",
+      "generator": "sin_i",
+      "constant": "tau",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7943466904341505,
+        "compression_ratio": 0.3229166666666667,
+        "spectral_flatness": 0.012126877955530111,
+        "pixel_std": 0.42682919267808084,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.77866235176133,
+        "entropy_component": 90.07066636957312,
+        "compression_component": 100,
+        "spectral_component": 98.78731220444699
+      }
+    },
+    {
+      "name": "sin_i_2pi",
+      "generator": "sin_i",
+      "constant": "2pi",
+      "constant_value": 6.283185307179586,
+      "metrics": {
+        "shannon_entropy": 0.7943466904341505,
+        "compression_ratio": 0.3229166666666667,
+        "spectral_flatness": 0.012126877955530111,
+        "pixel_std": 0.42682919267808084,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.77866235176133,
+        "entropy_component": 90.07066636957312,
+        "compression_component": 100,
+        "spectral_component": 98.78731220444699
+      }
+    },
+    {
+      "name": "sin_i_pi",
+      "generator": "sin_i",
+      "constant": "pi",
+      "constant_value": 3.141592653589793,
+      "metrics": {
+        "shannon_entropy": 0.9999217273691174,
+        "compression_ratio": 0.3385416666666667,
+        "spectral_flatness": 0.010919147398863916,
+        "pixel_std": 0.4999728725279892,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 96.03191057438853,
+        "entropy_component": 87.50097840788604,
+        "compression_component": 100,
+        "spectral_component": 98.90808526011361
+      }
+    },
+    {
+      "name": "sin_i2_pi",
+      "generator": "sin_i2",
+      "constant": "pi",
+      "constant_value": 3.141592653589793,
+      "metrics": {
+        "shannon_entropy": 0.9987472979361685,
+        "compression_ratio": 0.3645833333333333,
+        "spectral_flatness": 0.012885184713494407,
+        "pixel_std": 0.49956578367840837,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 95.99699393846947,
+        "entropy_component": 87.5156587757979,
+        "compression_component": 100,
+        "spectral_component": 98.71148152865055
+      }
+    },
+    {
+      "name": "sin_i3_pi",
+      "generator": "sin_i3",
+      "constant": "pi",
+      "constant_value": 3.141592653589793,
+      "metrics": {
+        "shannon_entropy": 0.9992954443621549,
+        "compression_ratio": 0.3802083333333333,
+        "spectral_flatness": 0.013093102317362361,
+        "pixel_std": 0.49975579974123363,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 95.99078003729467,
+        "entropy_component": 87.50880694547305,
+        "compression_component": 100,
+        "spectral_component": 98.69068976826377
+      }
+    },
+    {
+      "name": "sin_i3_3pi",
+      "generator": "sin_i3",
+      "constant": "3pi",
+      "constant_value": 9.42477796076938,
+      "metrics": {
+        "shannon_entropy": 0.9999217273691174,
+        "compression_ratio": 0.3697916666666667,
+        "spectral_flatness": 0.01321586307466008,
+        "pixel_std": 0.4999728725279892,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 95.9859762608726,
+        "entropy_component": 87.50097840788604,
+        "compression_component": 100,
+        "spectral_component": 98.678413692534
+      }
+    },
+    {
+      "name": "sin_i_3pi",
+      "generator": "sin_i",
+      "constant": "3pi",
+      "constant_value": 9.42477796076938,
+      "metrics": {
+        "shannon_entropy": 0.9980423339710904,
+        "compression_ratio": 0.2864583333333333,
+        "spectral_flatness": 0.013890012966692566,
+        "pixel_std": 0.4993213710599841,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 95.97954098827456,
+        "entropy_component": 87.52447082536136,
+        "compression_component": 100,
+        "spectral_component": 98.61099870333075
+      }
+    },
+    {
+      "name": "sin_i2_3pi",
+      "generator": "sin_i2",
+      "constant": "3pi",
+      "constant_value": 9.42477796076938,
+      "metrics": {
+        "shannon_entropy": 0.9992954443621549,
+        "compression_ratio": 0.375,
+        "spectral_flatness": 0.015161373549630597,
+        "pixel_std": 0.49975579974123363,
+        "pixel_range": 1,
+        "unique_values": 2
+      },
+      "score": {
+        "total": 95.9494146126493,
+        "entropy_component": 87.50880694547305,
+        "compression_component": 100,
+        "spectral_component": 98.48386264503695
+      }
+    },
+    {
+      "name": "cos_i2_pi_2",
+      "generator": "cos_i2",
+      "constant": "pi_2",
+      "constant_value": 1.5707963267948966,
+      "metrics": {
+        "shannon_entropy": 1.3588709045848724,
+        "compression_ratio": 0.2708333333333333,
+        "spectral_flatness": 0.006268282451441437,
+        "pixel_std": 63.59958234072713,
+        "pixel_range": 128,
+        "unique_values": 3
+      },
+      "score": {
+        "total": 94.77886845877791,
+        "entropy_component": 83.0141136926891,
+        "compression_component": 100,
+        "spectral_component": 99.37317175485586
+      }
+    },
+    {
+      "name": "sin_i2_pi_2",
+      "generator": "sin_i2",
+      "constant": "pi_2",
+      "constant_value": 1.5707963267948966,
+      "metrics": {
+        "shannon_entropy": 1.3971733452170751,
+        "compression_ratio": 0.2864583333333333,
+        "spectral_flatness": 0.006045955266292496,
+        "pixel_std": 63.88092131685274,
+        "pixel_range": 128,
+        "unique_values": 3
+      },
+      "score": {
+        "total": 94.63968085011011,
+        "entropy_component": 82.53533318478657,
+        "compression_component": 100,
+        "spectral_component": 99.39540447337075
+      }
+    },
+    {
+      "name": "sin_i2_pi_4",
+      "generator": "sin_i2",
+      "constant": "pi_4",
+      "constant_value": 0.7853981633974483,
+      "metrics": {
+        "shannon_entropy": 1.498590199447132,
+        "compression_ratio": 0.3177083333333333,
+        "spectral_flatness": 0.006716856699190598,
+        "pixel_std": 44.767015685204825,
+        "pixel_range": 90,
+        "unique_values": 3
+      },
+      "score": {
+        "total": 94.24594961808944,
+        "entropy_component": 81.26762250691085,
+        "compression_component": 100,
+        "spectral_component": 99.32831433008093
+      }
+    },
+    {
+      "name": "sin_i3_pi_2",
+      "generator": "sin_i3",
+      "constant": "pi_2",
+      "constant_value": 1.5707963267948966,
+      "metrics": {
+        "shannon_entropy": 1.9056390622295665,
+        "compression_ratio": 0.328125,
+        "spectral_flatness": 0.009271364280992128,
+        "pixel_std": 89.80386614728789,
+        "pixel_range": 254,
+        "unique_values": 4
+      },
+      "score": {
+        "total": 92.6684262310193,
+        "entropy_component": 76.17951172213043,
+        "compression_component": 100,
+        "spectral_component": 99.07286357190078
+      }
+    },
+    {
+      "name": "sin_i3_pi_4",
+      "generator": "sin_i3",
+      "constant": "pi_4",
+      "constant_value": 0.7853981633974483,
+      "metrics": {
+        "shannon_entropy": 1.9056390622295665,
+        "compression_ratio": 0.3645833333333333,
+        "spectral_flatness": 0.009706119464892218,
+        "pixel_std": 63.28692104218691,
+        "pixel_range": 179,
+        "unique_values": 4
+      },
+      "score": {
+        "total": 92.65973112734129,
+        "entropy_component": 76.17951172213043,
+        "compression_component": 100,
+        "spectral_component": 99.02938805351079
+      }
+    },
+    {
+      "name": "sin_i_pi_2",
+      "generator": "sin_i",
+      "constant": "pi_2",
+      "constant_value": 1.5707963267948966,
+      "metrics": {
+        "shannon_entropy": 1.999843446243421,
+        "compression_ratio": 0.2552083333333333,
+        "spectral_flatness": 0.008856874620058342,
+        "pixel_std": 89.80361950968307,
+        "pixel_range": 254,
+        "unique_values": 4
+      },
+      "score": {
+        "total": 92.323449584186,
+        "entropy_component": 75.00195692195723,
+        "compression_component": 100,
+        "spectral_component": 99.11431253799417
+      }
+    },
+    {
+      "name": "sin_i_pi_4",
+      "generator": "sin_i",
+      "constant": "pi_4",
+      "constant_value": 0.7853981633974483,
+      "metrics": {
+        "shannon_entropy": 2.499686824484042,
+        "compression_ratio": 0.21875,
+        "spectral_flatness": 0.005237110266679848,
+        "pixel_std": 89.65202535334379,
+        "pixel_range": 254,
+        "unique_values": 6
+      },
+      "score": {
+        "total": 90.52143220285124,
+        "entropy_component": 68.75391469394947,
+        "compression_component": 100,
+        "spectral_component": 99.47628897333202
+      }
+    },
+    {
+      "name": "tan_i2_3pi",
+      "generator": "tan_i2",
+      "constant": "3pi",
+      "constant_value": 9.42477796076938,
+      "metrics": {
+        "shannon_entropy": 1.4040573067140767,
+        "compression_ratio": 0.23958333333333334,
+        "spectral_flatness": 0.332915007383602,
+        "pixel_std": 22.41042584189177,
+        "pixel_range": 127,
+        "unique_values": 20
+      },
+      "score": {
+        "total": 88.07648495215018,
+        "entropy_component": 82.44928366607405,
+        "compression_component": 100,
+        "spectral_component": 66.7084992616398
+      }
+    }
+  ]
+}

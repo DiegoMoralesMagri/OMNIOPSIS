@@ -1,0 +1,102 @@
+{
+  "8": {
+    "null_distribution": {
+      "mean": 12.727382162471873,
+      "median": 12.691179596462863,
+      "std": 0.8081333979662888,
+      "max": 17.483343234754855,
+      "percentile_95": 14.05578145145439,
+      "percentile_99": 14.761569739764127,
+      "percentile_999": 16.239413019276164
+    },
+    "beacons": [
+      {
+        "beacon": "\u03c4=2\u03c0 sin(i\u00b2\u00b7c)",
+        "observed_score": 81.68,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0 sin(i\u00b7c)",
+        "observed_score": 81.24,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0 sin(i\u00b2\u00b7c)",
+        "observed_score": 80.33,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0/2 cos(i\u00b2\u00b7c)",
+        "observed_score": 82.25,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0/4 sin(i\u00b2\u00b7c)",
+        "observed_score": 79.66,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      }
+    ],
+    "bonferroni_alpha": 0.01,
+    "n_significant_bonferroni": 5
+  },
+  "16": {
+    "null_distribution": {
+      "mean": 7.110461376885777,
+      "median": 7.097155542953564,
+      "std": 0.4074399609412651,
+      "max": 8.808961317516733,
+      "percentile_95": 7.775560222461224,
+      "percentile_99": 8.180163233007535,
+      "percentile_999": 8.730959806993688
+    },
+    "beacons": [
+      {
+        "beacon": "\u03c4=2\u03c0 sin(i\u00b2\u00b7c)",
+        "observed_score": 87.99,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0 sin(i\u00b7c)",
+        "observed_score": 88.49,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0 sin(i\u00b2\u00b7c)",
+        "observed_score": 85.89,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0/2 cos(i\u00b2\u00b7c)",
+        "observed_score": 87.4,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      },
+      {
+        "beacon": "\u03c0/4 sin(i\u00b2\u00b7c)",
+        "observed_score": 85.8,
+        "p_value": 0.0,
+        "significance": "***",
+        "interpretation": "Extr\u00eamement significatif"
+      }
+    ],
+    "bonferroni_alpha": 0.01,
+    "n_significant_bonferroni": 5
+  }
+}

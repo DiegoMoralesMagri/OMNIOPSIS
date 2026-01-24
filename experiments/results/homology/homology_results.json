@@ -1,0 +1,86 @@
+[
+  {
+    "beacon_name": "tau_champion",
+    "beacon_label": "\u03c4 = 2\u03c0 (sin i\u00b2)",
+    "metrics": {
+      "H0_total_persistence": 7.0,
+      "H0_max_persistence": 1.0,
+      "H0_n_features": 7,
+      "H0_entropy": 1.9459101490483135,
+      "H1_total_persistence": 2.071067690849304,
+      "H1_max_persistence": 0.41421353816986084,
+      "H1_n_features": 5,
+      "H1_entropy": 1.6094379124291003
+    },
+    "persistence_method": "ripser",
+    "n_points": 500
+  },
+  {
+    "beacon_name": "pi_original",
+    "beacon_label": "\u03c0 (sin i\u00b2)",
+    "metrics": {
+      "H0_total_persistence": 7.0,
+      "H0_max_persistence": 1.0,
+      "H0_n_features": 7,
+      "H0_entropy": 1.9459101490483135,
+      "H1_total_persistence": 2.071067690849304,
+      "H1_max_persistence": 0.41421353816986084,
+      "H1_n_features": 5,
+      "H1_entropy": 1.6094379124291003
+    },
+    "persistence_method": "ripser",
+    "n_points": 500
+  },
+  {
+    "beacon_name": "pi_linear",
+    "beacon_label": "\u03c0 (sin i)",
+    "metrics": {
+      "H0_total_persistence": 7.0,
+      "H0_max_persistence": 1.0,
+      "H0_n_features": 7,
+      "H0_entropy": 1.9459101490483135,
+      "H1_total_persistence": 2.071067690849304,
+      "H1_max_persistence": 0.41421353816986084,
+      "H1_n_features": 5,
+      "H1_entropy": 1.6094379124291003
+    },
+    "persistence_method": "ripser",
+    "n_points": 500
+  },
+  {
+    "beacon_name": "pi_half",
+    "beacon_label": "\u03c0/2 (cos i\u00b2)",
+    "metrics": {
+      "H0_total_persistence": 11.0,
+      "H0_max_persistence": 1.0,
+      "H0_n_features": 11,
+      "H0_entropy": 2.3978952727873706,
+      "H1_total_persistence": 2.071067690849304,
+      "H1_max_persistence": 0.41421353816986084,
+      "H1_n_features": 5,
+      "H1_entropy": 1.6094379124291003
+    },
+    "persistence_method": "ripser",
+    "n_points": 500
+  },
+  {
+    "beacon_name": "random",
+    "beacon_label": "Random (baseline)",
+    "metrics": {
+      "H0_total_persistence": 10798.543686389923,
+      "H0_max_persistence": 51.0,
+      "H0_n_features": 499,
+      "H0_entropy": 6.149297133163088,
+      "H1_total_persistence": 1525.3299560546875,
+      "H1_max_persistence": 29.847614288330078,
+      "H1_n_features": 207,
+      "H1_entropy": 4.931819934058243,
+      "H2_total_persistence": 186.61675262451172,
+      "H2_max_persistence": 21.413562774658203,
+      "H2_n_features": 54,
+      "H2_entropy": 3.488534414958907
+    },
+    "persistence_method": "ripser",
+    "n_points": 500
+  }
+]
